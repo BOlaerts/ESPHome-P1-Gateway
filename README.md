@@ -6,7 +6,8 @@ EasyEDA project files can be imported from the EasyEDA folder.
 
 In the JLCPCB folder you can find the BOM and GERBER files to order all the components for the design as-is.
 ### Schematic
-![Schematic](/../main/Pictures/Schematic.png)
+<img src="/../main/Pictures/Schematic.png" width="40%" alt= "Schematic" height="40%">
+
 ### PCB
 <img src="/../main/Pictures/pcb1.jpg" width="40%" height="40%"> <img src="/../main/Pictures/pcb2.jpg" width="40%" height="40%">
 
