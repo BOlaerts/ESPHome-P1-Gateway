@@ -8,8 +8,8 @@ In the JLCPCB folder you can find the BOM and GERBER files to order all the comp
 ### Schematic
 ![Schematic](/../main/Pictures/Schematic.png)
 ### PCB
-![PCB-1](/../main/Pictures/pcb1.jpg)
-![PCB-2](/../main/Pictures/pcb2.jpg)
+<img src="/../main/Pictures/pcb1.jpg" width="40%" height="40%"> <img src="/../main/Pictures/pcb2.jpg" width="40%" height="40%">
+
 ## Software
 ### Home Assistant integration
 For integration in Home Assistant, I prefer using ESPHome with the DSMR component.
