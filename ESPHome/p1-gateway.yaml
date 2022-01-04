@@ -1,0 +1,114 @@
+substitutions:
+  devicename: p1-gateway
+  ssid: P1 Gateway
+  static_ip: <static ip of your node>
+  gateway: <gateway of your local network>
+  subnet: <subnet of your local network>
+
+packages:
+  wifi: !include common/wifi.yaml
+
+esphome:
+  name: $devicename
+
+esp8266:
+  board: d1_mini
+
+captive_portal:
+
+logger:
+  baud_rate: 0
+
+api:
+
+ota:
+
+web_server:
+  port: 80
+
+time:
+  - platform: homeassistant
+    id: homeassistant_time
+  
+uart:
+  - rx_pin: D7
+    baud_rate: 115200
+    id: p1_bus
+    
+dsmr:
+  max_telegram_length : 2000
+  uart_id: p1_bus
+  request_pin: D6
+  request_interval: 10s
+  receive_timeout: 5s
+
+sensor:
+  - platform: dsmr
+    energy_delivered_tariff1:
+      name: "Verbruik elektriciteit dag tarief"
+      unit_of_measurement: kWh
+      accuracy_decimals: 3
+      device_class: power
+    energy_delivered_tariff2:
+      name: "Verbruik elektriciteit nacht tarief"
+      unit_of_measurement: kWh
+      accuracy_decimals: 3
+      device_class: power
+    energy_returned_tariff1:
+      name: "Injectie elektriciteit dag tarief"
+      unit_of_measurement: kWh
+      accuracy_decimals: 3
+      device_class: power
+    energy_returned_tariff2:
+      name: "Injectie elektriciteit nacht tarief"
+      unit_of_measurement: kWh
+      accuracy_decimals: 3
+      device_class: power
+    power_delivered:
+      name: "Verbruik elektriciteit actueel"
+      unit_of_measurement: kW
+      accuracy_decimals: 1
+      device_class: power
+    power_returned:
+      name: "Injectie elektriciteit actueel"
+      unit_of_measurement: kW
+      accuracy_decimals: 1
+      device_class: power
+    voltage_l1:
+      name: "Spanning fase 1 actueel"
+      unit_of_measurement: V
+      accuracy_decimals: 3
+      device_class: voltage
+    current_l1:
+      name: "Stroom fase 1 actueel"
+      unit_of_measurement: A
+      accuracy_decimals: 3
+      device_class: current
+    power_delivered_l1:
+      name: "Verbruik vermogen fase 1 actueel"
+      unit_of_measurement: W
+      accuracy_decimals: 3
+      device_class: power
+      filters:
+        - multiply: 1000
+    power_returned_l1:
+      name: "Injectie vermogen fase 1 actueel"
+      unit_of_measurement: W
+      accuracy_decimals: 3
+      device_class: power
+      filters:
+        - multiply: 1000
+    gas_delivered_be:
+      name: "Verbruik gas"
+      unit_of_measurement: m³
+      accuracy_decimals: 3
+      device_class: gas
+
+text_sensor:
+  - platform: dsmr
+    identification:
+      name: "P1 Identificatie"
+    p1_version_be:
+      name: "P1 Versie"
+    timestamp :
+      name: "P1 Tijd"
