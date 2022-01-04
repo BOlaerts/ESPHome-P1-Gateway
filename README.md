@@ -1,6 +1,6 @@
 #ESPHome P1 Gateway
 ## Introduction
-Minimalistic dummy proof design (without SMD components) based on the designs of Willem Aandewiel and Marcel Zuidwijk.
+Simplified dummy proof design (without SMD components) based on the designs of Willem Aandewiel and Marcel Zuidwijk.
 ## Hardware
 EasyEDA project files can be imported from the EasyEDA folder.
 In the JLCPCB folder you can find the BOM and GERBER files to order all the components for the design as-is.
