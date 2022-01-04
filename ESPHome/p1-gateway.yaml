@@ -33,6 +33,7 @@ time:
 uart:
   - rx_pin: D7
     baud_rate: 115200
+    rx_buffer_size: 2000
     id: p1_bus
     
 dsmr:
