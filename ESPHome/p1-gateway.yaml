@@ -107,8 +107,8 @@ sensor:
 text_sensor:
   - platform: dsmr
     identification:
-      name: "P1 Identificatie"
+      name: "DSMR Identificatie"
     p1_version_be:
-      name: "P1 Versie"
+      name: "DSMR Versie"
     timestamp :
-      name: "P1 Tijd"
+      name: "DSMR Tijd"
