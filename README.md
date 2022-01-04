@@ -1,4 +1,4 @@
-#ESPHome P1 Gateway
+# ESPHome P1 Gateway
 ## Introduction
 Simplified dummy proof design (without SMD components) based on the designs of Willem Aandewiel and Marcel Zuidwijk.
 ## Hardware
