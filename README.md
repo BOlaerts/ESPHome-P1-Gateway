@@ -12,7 +12,7 @@ In the JLCPCB folder you can find the BOM and GERBER files to order all the comp
 <img src="/../main/Pictures/pcb1.jpg" width="40%" height="40%"> <img src="/../main/Pictures/pcb2.jpg" width="40%" height="40%">
 
 ### In action
-<img src="/../main/Pictures/in-action.jpg" width="40%" height="40%"> <img src="/../main/Pictures/home-assistant.png" width="40%" height="40%">
+<img src="/../main/Pictures/in-action.jpg" width="40%" height="40%">
 
 ## Software
 ### Home Assistant integration
@@ -21,6 +21,9 @@ For integration in Home Assistant, I prefer using ESPHome with the DSMR componen
 An example of my configuration can be found in the ESPHome folder.
 
 More details can be found on https://esphome.io/components/sensor/dsmr.html.
+
+<img src="/../main/Pictures/home-assistant.png" width="40%" height="40%">
+
 ### Stand alone configuration
 For a stand alone configuration, I prefer the software of Willem Aandewiel
 
